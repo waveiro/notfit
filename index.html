@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[url('back-mobile.jpg')] bg-contain bg-center">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NotFit Club - Be Strong, Be Healthy, We Just Can't Help With That! Join our fun and unique gym experience offering spinning, crossfit, and weights."
+    />
+    <meta
+      name="keywords"
+      content="NotFit Club, gym, fitness, spinning, crossfit, weights, health, workout"
+    />
+    <meta name="author" content="NotFit Club" />
+    <meta property="og:title" content="NotFit Club - Be Strong, Be Healthy" />
+    <meta
+      property="og:description"
+      content="We just can't help with that! Join our fun and unique gym experience."
+    />
+    <meta property="og:image" content="path-to-your-image.jpg" />
+    <meta property="og:type" content="website" />
+    <title>NotFit Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-black bg-opacity-85 text-white font-sans h-dvh flex flex-col justify-evenly"
+  >
+    <main class="px-10 py-8 h-full max-h-screen flex justify-between flex-col">
+      <header
+        class="text-red-600 font-bold text-5xl caret-red-600 uppercase font-libreFranklin"
+      >
+        <p>
+          <span class="">BE</span> <br />
+          <span class="text-stroke-red-600 font-archivoBlack">Strong</span>
+        </p>
+        <p>
+          <span class="">BE</span> <br />
+          <span class="text-stroke-red-600 font-archivoBlack">Healthy</span>
+        </p>
+        <p class="text-sm text-neutral-200 tracking-[.20em]">
+          We just can't help with that
+        </p>
+      </header>
+
+      <div class="flex px-2 justify-center items-center flex-col">
+        <h1 class="text-center uppercase">
+          <span
+            class="font-bebasNeue text-neutral-200 text-8xl leading-[0rem] tracking-[1rem]"
+            >Not Fit</span
+          >
+          <span
+            class="font-archivoBlack text-red-600 font-bold text-stroke-red-600 text-[125px] leading-none"
+            >Club</span
+          >
+        </h1>
+        <p class="font-bold uppercase flex justify-between gap-5 text-lg">
+          <span class="text-neutral-200 mr-3"> New year </span>
+          <span class="text-red-600"> Same person </span>
+        </p>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            bebasNeue: ["Bebas Neue", "sans-serif"],
+            libreFranklin: ["Libre Franklin", "sans-serif"],
+            archivoBlack: ["Archivo Black", "sans-serif"],
+          },
+        },
+      },
+      plugins: [
+        function ({ addUtilities }) {
+          const strokeUtilities = {
+            ".text-stroke-red-600": {
+              "-webkit-text-stroke": "1px rgb(220, 38, 38)", // Tailwind's red-600 color
+              "-webkit-text-fill-color": "transparent",
+            },
+          };
+
+          // Add the single utility
+          addUtilities(strokeUtilities, ["responsive", "hover"]);
+        },
+      ],
+    };
+  </script>
+</html>
